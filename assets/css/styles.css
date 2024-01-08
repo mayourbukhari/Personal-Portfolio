@@ -550,6 +550,7 @@ img {
 }
 
 
+
 /*==================== QUALIFICATION ====================*/
 .qualification__tabs{
   display: flex;
@@ -728,6 +729,15 @@ img {
 .projects__modal-icon{
   color: var(--first-color);
   margin-right: var(--mb-0-25);
+}
+.projects__link {
+  text-decoration: none; /* Remove underline from the link */
+  color: black; /* Set the link color, you can change this to your preferred color */
+  /* Add any other styling for the link if needed */
+}
+
+.projects__link:hover {
+  text-decoration: underline; /* Underline the link on hover */
 }
 
 /* Active Modal */
