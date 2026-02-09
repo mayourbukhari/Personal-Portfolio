@@ -44,8 +44,13 @@ Welcome to the vibrant world of my portfolio! Here, creativity meets technology,
 - [favicon.io](https://favicon.io/favicon-generator/) for turning imagination into a tiny, distinctive icon.
 
 
-## 📬 Get in Touch
+### Get in Touch 
+Your feedback means the world to me! Reach out via
 
-Your feedback means the world to me! Reach out via email at smayour82@gmail.com. Let's connect, collaborate, and create something extraordinary.
+[![Youtube](https://img.shields.io/badge/Youtube-Subscribe-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@PossibleCode)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/syed-mohsin-bukhari/)
+[![Mail](https://img.shields.io/badge/Mail-Contact-informational?style=for-the-badge&logo=gmail)](mailto:smayour82@gmail.com)
+
+Let's connect, collaborate, and create something extraordinary.
 
 Thank you for visiting, and enjoy your journey through my digital realm! 🌐
