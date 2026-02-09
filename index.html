@@ -2,7 +2,7 @@
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <span class="about__info-name">Publications <br> Published</span>
        
         <!--==================== UNICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -41,7 +41,7 @@
 
         <!-- HTML Meta Tags -->
         <title>Syed Mohsin Bukhari's Portfolio 👋</title>
-        <meta name="description" content="Extensive expertise in developing Embedded Systems and Software projects at a high level.">
+        <meta name="description" content="AI/ML engineer focused on computer vision, applied machine learning, and web-based deployments.">
 
         <!-- Facebook Meta Tags -->
         <!-- <meta property="og:url" content="https://www.syedmohsin.com/">
@@ -71,6 +71,17 @@
     </head>
 
     <body>
+        <!--==================== LOADING SCREEN ====================-->
+        <div class="loading" id="loading">
+            <div class="loading__content">
+                <div class="loading__spinner"></div>
+                <h2 class="loading__text">Loading...</h2>
+                <div class="loading__progress">
+                    <div class="loading__bar" id="loading-bar"></div>
+                </div>
+            </div>
+        </div>
+
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
@@ -94,15 +105,25 @@
                             </a>
                         </li>
                         <li class="nav__item">
+                            <a href="#services" class="nav__link">
+                                <i class="uil uil-cog nav__icon"></i> Services
+                            </a>
+                        </li>
+                        <li class="nav__item">
                             <a href="#projects" class="nav__link">
                                 <i class="uil uil-briefcase-alt nav__icon"></i> Projects
                             </a>
                         </li>
-                        <!-- <li class="nav__item">
-                            <a href="#paper" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i> Papers
+                        <li class="nav__item">
+                            <a href="#achievements" class="nav__link">
+                                <i class="uil uil-trophy nav__icon"></i> Achievements
                             </a>
-                        </li> -->
+                        </li>
+                        <li class="nav__item">
+                            <a href="#paper" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i> Publications
+                            </a>
+                        </li>
                         <li class="nav__item">
                             <a href="#contact" class="nav__link">
                                 <i class="uil uil-message nav__icon"></i> Contact
@@ -111,7 +132,6 @@
                     </ul>
                     <i class="uil uil-times nav__close" id="nav-close"></i>
                 </div>
-
                 <div class="nav__btns">
                     <!-- Theme Change Buttons -->
                     <i class="uil uil-moon change-theme" id="theme-button"></i>
@@ -120,7 +140,6 @@
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="uil uil-apps"></i>
                     </div>
-                </div>
             </nav>
         </header>
 
@@ -128,53 +147,51 @@
         <main class="main">
             <!--==================== HOME ====================-->
             <section class="home section" id="home" data-id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social">
-                            <a href="https://www.linkedin.com/in/syed-mohsin-bukhari-743b83206/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
-                            
-                            </a>
-                            <a href="https://github.com/mayourbukhari" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github-alt"></i>
-                            </a>
-                        </div>
-
-                        <div class="home__img">
-                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-
-                                    <image class="home__blob-img" x='12' y='18' xlink:href="assets/img/perfil.png"/>
-                                </g>
-                            </svg>
-                        </div>
-
+                <div class="home__container container">
+                    <div class="home__content">
                         <div class="home__data">
-                            <h1 class="home__title">Hi, I am Mohsin.</h1>
-                            <h3 class="home__subtitle">Software And Embedded Engineer</h3>
-                            <p class="home__description">Extensive expertise in developing Embedded Systems and Software projects at a high level.</p>
-                            <a href="#contact" class="button button--flex">
-                                Contact Me <i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
+                            <span class="home__eyebrow">AI/ML Engineer</span>
+                            <h1 class="home__title">Syed Mohsin Bukhari</h1>
+                            <p class="home__subtitle">Computer Vision - Deep Learning - Web Deployment</p>
+                            <p class="home__description">I build AI systems that move from research to real-world products, with a focus on computer vision, model integration, and reliable web deployments.</p>
 
-                    <div class="home__scroll">
-                        <a href="#about" class="home__scroll-button button--flex">
-                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                            <span class="home__scroll-name">Scroll Down</span>
-                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                        </a>
+                            <div class="home__cta">
+                                <a href="#contact" class="button button--flex">
+                                    Contact Me <i class="uil uil-message button__icon"></i>
+                                </a>
+                                <a href="#projects" class="button button--ghost button--flex">
+                                    View Projects <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+
+                            <div class="home__meta">
+                                <span class="home__meta-item"><i class="uil uil-map-marker"></i> Baramulla, J&K</span>
+                                <span class="home__meta-item"><i class="uil uil-envelope"></i> syedmohsinb786@gmail.com</span>
+                            </div>
+
+                            <div class="home__social">
+                                <a href="https://www.linkedin.com/in/syed-mohsin-bukhari/" target="_blank" class="home__social-icon">
+                                    <i class="uil uil-linkedin-alt"></i>
+                                </a>
+                                <a href="https://github.com/mayourbukhari" target="_blank" class="home__social-icon">
+                                    <i class="uil uil-github-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="home__visual">
+                            <div class="home__frame">
+                                <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <mask id="mask0" mask-type="alpha">
+                                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                    </mask>
+                                    <g mask="url(#mask0)">
+                                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                        <image class="home__blob-img" x="12" y="18" xlink:href="assets/img/perfil.png"/>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -189,22 +206,22 @@
 
 
                     <div class="about__data">
-                        <p class="about__description">I'm Syed Mohsin Bukhari, an Electronics Engineer. My goal is to make a difference in the changing field of electronics and robotics where creativity and innovation come together in remarkable ways. </p>
+                        <p class="about__description">AI/ML engineer focused on computer vision, deep learning, and practical deployment. Experience building AI-powered web applications, integrating model APIs, and delivering real-time, user-facing systems.</p>
 
                         <div class="about__info">
                             <div>
-                                <span class="about__info-title">Fresher</span>
+                                <span class="about__info-title">6+ Months</span>
                                 <span class="about__info-name"> <br> Experience</span>
                             </div>
 
                             <div>
-                                <span class="about__info-title">11+</span>
+                                <span class="about__info-title">2+</span>
                                 <span class="about__info-name">Projects <br> Completed</span>
                             </div>
 
                             <div>
-                                <span class="about__info-title">0</span>
-                                <span class="about__info-name">Papers <br> Published</span>
+                                <span class="about__info-title">1</span>
+                                <span class="about__info-name">Publications <br> Published</span>
                             </div>
                         </div>
 
@@ -339,14 +356,13 @@
                     </div>
 
                     <div> -->
-                        <!--==================== SKILLS 3 ====================-->
-                        <div class="skills__content skills__close">
+                        <!--==================== SKILLS 1 ====================-->
+                        <div class="skills__content skills__open">
                             <div class="skills__header">
                                 <i class="uil uil-arrow skills__icon"></i>
 
                                 <div>
-                                    <h1 class="skills__titles">Programming Codes</h1>
-                                    <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                                    <h1 class="skills__titles">Programming Languages</h1>
                                 </div>
 
                                 <i class="uil uil-angle-down skills__arrow"></i>
@@ -355,56 +371,123 @@
                             <div class="skills__list grid">
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">MATLAB</h3>
-                                        <span class="skills__number">Beginner</span> 
+                                        <h3 class="skills__name">Python</h3>
+                                        <span class="skills__number">Advanced</span> 
                                     </div>
                                     <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
+                                        <span class="skills__percantage skills__80"></span>
                                     </div>
                                 </div>
 
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">PYTHON</h3>
-                                        <span class="skills__number">Intermediate</span> 
+                                        <h3 class="skills__name">JavaScript</h3>
+                                        <span class="skills__number">Advanced</span> 
                                     </div>
                                     <div class="skills__bar">
-                                        <span class="skills__percantage skills__40"></span>
+                                            <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+
+                        <!--==================== SKILLS 2 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-server-network skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">Frameworks & Libraries</h1>
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">TensorFlow</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
                                     </div>
                                 </div>
 
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">C++</h3>
-                                        <span class="skills__number">Beginner</span> 
+                                        <h3 class="skills__name">PyTorch</h3>
+                                        <span class="skills__number">Advanced</span> 
                                     </div>
                                     <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Keras</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
                                     </div>
                                 </div>
                                 
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">HTML/CSS</h3>
-                                        <span class="skills__number">Intermediate</span> 
+                                        <h3 class="skills__name">scikit-learn</h3>
+                                        <span class="skills__number">Advanced</span> 
                                     </div>
                                     <div class="skills__bar">
-                                        <span class="skills__percantage skills__40"></span>
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+
+                        <!--==================== SKILLS 3 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-browser skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__titles">Data Handling</h1>
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">NumPy</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
                                     </div>
                                 </div>
 
-
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Pandas</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>  
 
                         <!--==================== SKILLS 4 ====================-->
                         <div class="skills__content skills__close">
                             <div class="skills__header">
-                                <i class="uil uil-code-branch skills__icon"></i>
+                                <i class="uil uil-robot skills__icon"></i>
 
                                 <div>
-                                    <h1 class="skills__titles">Miscellaneous </h1>
-                                    <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                                    <h1 class="skills__titles">Deployment & Tools</h1>
                                 </div>
 
                                 <i class="uil uil-angle-down skills__arrow"></i>
@@ -413,71 +496,51 @@
                             <div class="skills__list grid">
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">DOS/UNIX</h3>
-                                        <span class="skills__number">Beginner</span> 
+                                        <h3 class="skills__name">REST APIs</h3>
+                                        <span class="skills__number">Advanced</span> 
                                     </div>
                                     <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
+                                        <span class="skills__percantage skills__80"></span>
                                     </div>
                                 </div>
 
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">VIVADO</h3>
-                                        <span class="skills__number">Intermediate</span> 
+                                        <h3 class="skills__name">Model Integration</h3>
+                                        <span class="skills__number">Advanced</span> 
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percantage skills__80"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Docker</h3>
+                                        <span class="skills__number">Basic</span> 
                                     </div>
                                     <div class="skills__bar">
                                         <span class="skills__percantage skills__40"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Origin</h3>
-                                        <span class="skills__number">Beginner</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
                                     </div>
                                 </div>
                                 
-                                <!-- <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">ParaView</h3>
-                                        <span class="skills__number">Proficient</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__80"></span>
-                                    </div>
-                                </div> -->
-
-                                <!-- <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Mathcad</h3>
-                                        <span class="skills__number">Proficient</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__80"></span>
-                                    </div>
-                                </div> -->
-
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">Git/GitHub</h3>
-                                        <span class="skills__number">Intermediate</span> 
+                                        <h3 class="skills__name">Git</h3>
+                                        <span class="skills__number">Advanced</span> 
                                     </div>
                                     <div class="skills__bar">
-                                        <span class="skills__percantage skills__40"></span>
+                                        <span class="skills__percantage skills__80"></span>
                                     </div>
                                 </div>
 
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">MS Office</h3>
-                                        <span class="skills__number">Intermediate</span> 
+                                        <h3 class="skills__name">Postman</h3>
+                                        <span class="skills__number">Advanced</span> 
                                     </div>
                                     <div class="skills__bar">
-                                        <span class="skills__percantage skills__60"></span>
+                                        <span class="skills__percantage skills__80"></span>
                                     </div>
                                 </div>
                             </div>
@@ -487,7 +550,157 @@
                 </div>
             </section>
 
-            <!--==================== QUALIFICATION ====================-->
+            <!--==================== SERVICES ====================-->
+            <section class="services section" id="services" data-id="services">
+                <h2 class="section__title">Services</h2>
+                <span class="section__subtitle">What I Offer</span>
+
+                <div class="services__container container grid">
+                    <!--==================== SERVICE 1 ====================-->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-web-grid services__icon"></i>
+                            <h3 class="services__title">Web <br> Development</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link services__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Web Development</h4>
+                                <i class="uil uil-times services__modal-close"></i>
+
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Responsive web applications and UI workflows</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Backend integration for data-driven features</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>REST API design and integration</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Performance tuning and reliability improvements</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== SERVICE 2 ====================-->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-robot services__icon"></i>
+                            <h3 class="services__title">AI/ML <br> Solutions</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link services__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">AI/ML Development</h4>
+                                <i class="uil uil-times services__modal-close"></i>
+
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Machine learning model development and validation</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Computer vision and image processing systems</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Applied LLM workflows and prompt logic</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Data analysis and predictive modeling</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== SERVICE 3 ====================-->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-cloud services__icon"></i>
+                            <h3 class="services__title">Model <br> Deployment</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link services__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Model Deployment</h4>
+                                <i class="uil uil-times services__modal-close"></i>
+
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Model integration in web applications</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>REST API deployment for inference</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Basic containerization with Docker</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Monitoring and reliability for production use</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== STATISTICS ====================-->
+            <section class="statistics section">
+                <div class="statistics__container container grid">
+                    <div class="statistics__content">
+                        <span class="statistics__number">2+</span>
+                        <span class="statistics__name">Projects <br> Completed</span>
+                    </div>
+
+                    <div class="statistics__content">
+                        <span class="statistics__number">500+</span>
+                        <span class="statistics__name">Happy <br> Users</span>
+                    </div>
+
+                    <div class="statistics__content">
+                        <span class="statistics__number">1</span>
+                        <span class="statistics__name">Research <br> Publications</span>
+                    </div>
+
+                    <div class="statistics__content">
+                        <span class="statistics__number">6+</span>
+                        <span class="statistics__name">Months <br> Experience</span>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== QUALIFICATIONS ====================-->
             <section class="qualification section">
                 <h2 class="section__title">Qualifications</h2>
                 <span class="section__subtitle">Academic and Professional Career</span>
@@ -510,18 +723,36 @@
                              <!--==================== QUALIFICATION  1 ====================-->
                              <div class="qualification__data">
                                 <div>
-                                    <span class="qualification__degree">B.Tech</span>
-                                    <h3 class="qualification__tittle">Electronics And Communication Engineering</h3>
-                                    <span class="qualification__subtitle">Islamic University of Science and Technology</span>
+                                    <span class="qualification__degree">M.Tech</span>
+                                    <h3 class="qualification__tittle">Artificial Intelligence and Machine Learning</h3>
+                                    <span class="qualification__subtitle">Lovely Professional University, Punjab | CGPA: 7.3</span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        2019 - 2023
+                                        2024 - 2026
                                     </div>
                                 </div>
                                 <div>
                                     <span class="qualification__rounder"></span>
                                     <span class="qualification__line"></span>
                                 </div>
+                            </div>
+
+                             <div class="qualification__data">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__degree">B.Tech</span>
+                                    <h3 class="qualification__tittle">Electronics Engineering</h3>
+                                    <span class="qualification__subtitle">Islamic University of Science and Technology, Awantipora | CGPA: 7.14</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2019 - 2023
+                                    </div>
+                                </div>
+
                             </div>
 
                              <!--==================== QUALIFICATION  2 ====================-->
@@ -590,36 +821,16 @@
                             <!--==================== QUALIFICATION  1 ====================-->
                             <div class="qualification__data">
                                <div>
-                                   <h3 class="qualification__tittle">Tutor</h3>
-                                   <span class="qualification__subtitle">Hanfia High School</span>
+                                   <h3 class="qualification__tittle">Web Development Intern</h3>
+                                   <span class="qualification__subtitle">EnableNow Technology Solutions, Srinagar, Jammu and Kashmir</span>
                                    <div class="qualification__calendar">
                                        <i class="uil uil-calendar-alt"></i>
-                                       2020 
+                                       Nov 2023 - Apr 2024
                                    </div>
                                </div>
                                <div>
                                    <span class="qualification__rounder"></span>
-                                   <span class="qualification__line"></span>
                                </div>
-                           </div>
-
-                            <!--==================== QUALIFICATION  2 ====================-->
-                            <div class="qualification__data">
-                               <div></div>
-                               <div>
-                                   <span class="qualification__rounder"></span>
-                                   <span class="qualification__line"></span>
-                               </div>
-
-                               <div>
-                                   <h3 class="qualification__tittle">Intern</h3>
-                                   <span class="qualification__subtitle">Amargarh Grid Station</span>
-                                   <div class="qualification__calendar">
-                                       <i class="uil uil-calendar-alt"></i>
-                                       2022 
-                                   </div>
-                               </div>
-
                            </div>
 
                             <!--==================== QUALIFICATION  3 ====================-->
@@ -666,520 +877,583 @@
             <!--==================== PROJECTS ====================-->
             <section class="projects section" id="projects" data-id="projects">
                 <h2 class="section__title">Projects</h2>
-                <span class="section__subtitle">Involved Projects</span>
+                <span class="section__subtitle">Explore My Work by Category</span>
 
-                <div class="projects__container container grid">
-                    <!--==================== PROJECTS 1 ====================-->
-                    <!-- <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">SMR & MMR</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">Small and Micro Modular Reactors Technology Analyses </h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Literature and Technology Review</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Technical Feasibility Analysis</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Commercial Feasibility Analysis</p>
-                                    </li>
-                                </ul>
+                <!-- AI/ML & Computer Vision Category -->
+                <div class="projects__category">
+                    <h3 class="projects__category-title">
+                        <i class="uil uil-brain"></i> AI/ML & Computer Vision
+                    </h3>
+                    <div class="projects__container container grid">
+                        <!--==================== PROJECT 1 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-robot projects__icon"></i>
+                                <h3 class="projects__title">Visionary Fruit Sort</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">AI-based Computer Vision System</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>CNN-based fruit sorting and grading system for automated quality assessment</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Real-time inference, model integration, and web deployment</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Awarded Best Project of the Year 2024</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Live: <a href="https://visionaryfruitsort.vercel.app" target="_blank">visionaryfruitsort.vercel.app</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>  -->
 
-                    <!--==================== PROJECTS 2 ====================-->
-                    <!-- <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">SMART</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">System-Integrated Modular Advanced Reactor Passive Containment Cooling System</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Modeling of SMART CPRSS through GOTHIC</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Literature Survey for the Design and Arrangement of Sparger Layout for SMART CPRSS</p>
-                                    </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Direct contact condensation</p>
+                        <!--==================== PROJECT 2 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-comment-dots projects__icon"></i>
+                                <h3 class="projects__title">StyleAI-Advisor</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">AI-Powered Advisory System</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>LLM-based application for personalized grooming and style recommendations</p>
                                         </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Chugging</p>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Advanced prompt engineering, API integration, and real-time workflows</p>
                                         </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Modeling of SISTA through MARS-KS</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>CAP Verification</p>
-                                    </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Simulations of condensation and boiling conceptual problems through MARS</p>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>GitHub: <a href="https://github.com/mayourbukhari/StyleAI-Advisor" target="_blank">mayourbukhari/StyleAI-Advisor</a></p>
                                         </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Simulations of a conceptual problem through MARS and SPACE</p>
-                                        </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>CAP Input Preparation for sub P/T Analysis</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>CPRSS Hydraulics and Heat structure Calculation Sheet Preparation for CAP</p>
-                                    </li>
-                                </ul>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>          -->
 
-                    <!--==================== PROJECTS 3 ====================-->
-                    <!-- <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">PGSFR</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">Prototype Gen-IV Sodium-Cooled Fast Reactor Condition Analysis Project</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Simulations of Design Basis Events through MARS-LMR</p>
-                                    </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Leakage of Intermediate Heat Transport System Pipe</p>
+                        <!--==================== PROJECT 3 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-medkit projects__icon"></i>
+                                <h3 class="projects__title">MedGemma</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">AI-Powered Surgical Assistance</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Surgical assistance system for preoperative planning and real-time guidance</p>
                                         </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Reactor Vessel Leak into the Containment Vessel</p>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Computer vision and NLP for postoperative outcome prediction</p>
                                         </li>
-                                </ul>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Forked from Google-Health, enhanced with custom features</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>GitHub: <a href="https://github.com/mayourbukhari/medgemma" target="_blank">mayourbukhari/medgemma</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div> -->
 
-                    <!--==================== PROJECTS 4 ====================-->
-                    <!-- <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">SMART DEC</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">Feasibility Study of the SPACE Code Application on DEC Accident Analysis of SMART</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>SPACE Code Calculation Sheet Preparation</p>
-                                    </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Passive Safety Injection System (PSIS)</p>
+                        <!--==================== PROJECT 4 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-head-side projects__icon"></i>
+                                <h3 class="projects__title">Real-Time AI Assistant for Surgeons</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">Surgical AI Tool with CV & NLP</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Image processing pipeline with REST API for surgical assistance</p>
                                         </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Passive Residual Heat Removal System (PRHRS)</p>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>NLP pipeline fine-tuned with LoRA for medical context understanding</p>
                                         </li>
-                                </ul>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Featured in IJPE publication on real-time AI in surgery</p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                     -->
-                    <!--==================== PROJECTS 5 ====================-->
-                    <!-- <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">PCCS</h3>
-                        </div>
+                </div>
 
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">Conceptual Design and Development of Passive Containment Cooling System for APR1400</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Literature Survey on Condensation with Non-condensable Gases</p>
-                                    </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Separate and integral test facilities to validate the MARS condensation model</p>
+                <!-- Full Stack Web Applications Category -->
+                <div class="projects__category">
+                    <h3 class="projects__category-title">
+                        <i class="uil uil-layer-group"></i> Full Stack Web Applications
+                    </h3>
+                    <div class="projects__container container grid">
+                        <!--==================== PROJECT 5 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-shield-check projects__icon"></i>
+                                <h3 class="projects__title">GPMS</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">Gate Pass Management System</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Web application for managing entries and exits of visitors and employees</p>
                                         </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Available condensation models (e.g. Colburn-Hougen, Peterson's Model)</p>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Built with TypeScript for type safety and scalability</p>
                                         </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Review of MARS condensation model</p>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Real-time tracking and automated approval workflows</p>
                                         </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>COPAIN Test Facility (on-plane condensation) Simulations through MARS-KS</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Dehbi, Kawakubo, Su, Lee Experiments (on-tube condensation) Simulations through MARS-KS</p>
-                                    </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>MARS trouble report to KINS: Volume average velocity deficiency</p>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>GitHub: <a href="https://github.com/mayourbukhari/GPMS" target="_blank">mayourbukhari/GPMS</a></p>
                                         </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Multi-Compartment and Multi-Dimension Simulations (conceptual) through GOTHIC</p>
-                                    </li>
-                                </ul>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>                        -->
 
-                    <!--==================== PROJECTS 6 ====================-->
-                    <!-- <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">ATLAS</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">Determination of ATLAS Heat Loss and Improvement of MARS Input Model</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>ATLAS Experimental Facility Heat Loss Quantification of RCS side</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Integral and Differential Approaches</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Implementation of Heat Loss Modeling to MARS Input</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Simulations of OECD and DSP Problems with the new MARS Input</p>
-                                    </li>
-                                </ul>
+                        <!--==================== PROJECT 6 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-palette projects__icon"></i>
+                                <h3 class="projects__title">Artist Marketplace</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">Ecommerce Platform for Artists</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Dedicated platform where artists showcase and sell artwork directly</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Secure payment integration and artist profile management</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Full-stack JavaScript implementation with modern UI/UX</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>GitHub: <a href="https://github.com/mayourbukhari/Artist-Marketplace" target="_blank">mayourbukhari/Artist-Marketplace</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>  -->
 
-                    <!--==================== PROJECTS 7 ====================-->
-                    <!-- <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">NON-LOCA</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">SPACE Code Input Deck Preparation and Validation</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>HANUL 1&2 Hydraulics and Heat Structure Calculation Sheet Preparation for SPACE</p>
-                                    </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Reactor pressure vessel</p>
+                        <!--==================== PROJECT 7 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-users-alt projects__icon"></i>
+                                <h3 class="projects__title">OptiHR</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">HR Management System</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Comprehensive HR solution for employee management and analytics</p>
                                         </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Steam generators</p>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>TypeScript backend with Python analytics modules</p>
                                         </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Steam generators</p>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Features include payroll, attendance, and performance tracking</p>
                                         </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Secondary Systems</p>
-                                        </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>HANUL 5&6 Hydraulics and Heat Structure Calculation Sheet Preparation for SPACE</p>
-                                    </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Steam generators</p>
-                                        </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Steam lines</p>
-                                        </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Safety systems</p>
-                                        </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>SPACE Code Validation</p>
-                                        </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>DSP01 - ATLAS DVI line break SBLOCA simulation</p>
-                                        </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>DSP02 - ATLAS CL SBLOCA</p>
-                                        </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Marviken sensitivity tests</p>
-                                        </li>
-                                </ul>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div> -->
 
-                    <!--==================== PROJECTS 8 ====================-->
-                    <!-- <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">PAFS</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">Passive Auxiliary Feedwater System Development</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Calculation of Pipe Flow Resistance Coefficients</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>RELAP5 Input Deck Preparation for HANUL5&6</p>
-                                    </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Full steady-state input model</p>
+                        <!--==================== PROJECT 8 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-graduation-cap projects__icon"></i>
+                                <h3 class="projects__title">AI Learning Hub</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">Educational Platform</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Learning platform for AI/ML courses and tutorials</p>
                                         </li>
-                                        <li class="projects__modal-project-ind">
-                                            <i class="uil uil-check projects__modal-icon"></i>
-                                            <p>Code-to-code verification with SPACE</p>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Interactive code playground and video lessons</p>
                                         </li>
-                                </ul>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Built with TypeScript and modern learning frameworks</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>GitHub: <a href="https://github.com/mayourbukhari/AILEARNINGHUB" target="_blank">mayourbukhari/AILEARNINGHUB</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div> -->
 
-                    <!--==================== PROJECTS 9 ====================-->
-                    <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">AI & ML</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">AI and machine learning projects</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>A Computer Vision Based Fruit Grading & Sorting System</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Fraud Detection System</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Chatbot for FAQ</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Lung Cancer Prediction from Symptoms</p>
-                                    </li>
-                                </ul>
+                        <!--==================== PROJECT 9 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-shopping-cart projects__icon"></i>
+                                <h3 class="projects__title">Sheen Fashion</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">Fashion Ecommerce Website</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Full-featured ecommerce platform for fashion products</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Shopping cart, wishlist, and secure checkout functionality</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Responsive design with smooth user experience</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>GitHub: <a href="https://github.com/mayourbukhari/Sheen" target="_blank">mayourbukhari/Sheen</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div> 
 
-                    <!--==================== PROJECTS 10 ====================-->
-                    <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">IoT</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">IoT (Internet of Things) projects</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Smart Plant Watering System</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Home Automation with Voice Control</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Garage Door Opener with Smartphone App</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Density based traffic control system.</p>
-                                    </li>
-                                </ul>
+                        <!--==================== PROJECT 10 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-store projects__icon"></i>
+                                <h3 class="projects__title">Full Stack Ecommerce</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">Complete Ecommerce Solution</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>End-to-end ecommerce platform with admin dashboard</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Product management, order tracking, and inventory system</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Payment gateway integration and email notifications</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>GitHub: <a href="https://github.com/mayourbukhari/Fullstack-Ecomerce" target="_blank">mayourbukhari/Fullstack-Ecomerce</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
+                </div>
 
-                    <!--==================== PROJECTS 11 ====================-->
-                    <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">Analog</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">Analog projects</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Audio Amplifier</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Basic Audio Mixer</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Variable Power Supply</p>
-                                    </li>
-                                </ul>
+                <!-- Tools & Utilities Category -->
+                <div class="projects__category">
+                    <h3 class="projects__category-title">
+                        <i class="uil uil-wrench"></i> Tools & Utilities
+                    </h3>
+                    <div class="projects__container container grid">
+                        <!--==================== PROJECT 11 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-check-square projects__icon"></i>
+                                <h3 class="projects__title">TODO Application</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">Task Management System</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Full-stack task management with client and server architecture</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>CRUD operations with real-time updates</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>JavaScript/Node.js backend with RESTful API</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>GitHub: <a href="https://github.com/mayourbukhari/TODO-Server" target="_blank">Server</a> | <a href="https://github.com/mayourbukhari/TODO-CLient" target="_blank">Client</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div> 
+
+                        <!--==================== PROJECT 12 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-comment-alt-lines projects__icon"></i>
+                                <h3 class="projects__title">Feedback System</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">User Feedback Platform</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Feedback collection and analysis platform</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Rating system with comment threads and moderation</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Analytics dashboard for feedback insights</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>GitHub: <a href="https://github.com/mayourbukhari/feedback-backend" target="_blank">Backend</a> | <a href="https://github.com/mayourbukhari/feedback-frontend" target="_blank">Frontend</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--==================== PROJECT 13 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-robot projects__icon"></i>
+                                <h3 class="projects__title">ChatBot</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">Intelligent Chatbot</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Conversational AI chatbot with natural language processing</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Context-aware responses and intent recognition</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>JavaScript implementation with API integration</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>GitHub: <a href="https://github.com/mayourbukhari/chatBot" target="_blank">mayourbukhari/chatBot</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--==================== PROJECT 14 ====================-->
+                        <div class="projects__content">
+                            <div>
+                                <i class="uil uil-cube projects__icon"></i>
+                                <h3 class="projects__title">3D Portfolio Website</h3>
+                            </div>
+                            <span class="button button--flex button--small button--link projects__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </span>
+                            <div class="projects__modal">
+                                <div class="projects__modal-content">
+                                    <h4 class="projects__modal-title">Interactive 3D Portfolio</h4>
+                                    <i class="uil uil-times projects__modal-close"></i>
+                                    <ul class="projects__modal-projects grid">
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Portfolio website with 3D elements and animations</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Three.js for 3D graphics and Draco compression</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>Smooth scrolling and parallax effects</p>
+                                        </li>
+                                        <li class="projects__modal-project">
+                                            <i class="uil uil-check-circle projects__modal-icon"></i>
+                                            <p>GitHub: <a href="https://github.com/mayourbukhari/my-3D-portfolio-website" target="_blank">mayourbukhari/my-3D-portfolio-website</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ACHIEVEMENTS ====================-->
+            <section class="achievements section" id="achievements" data-id="achievements">
+                <h2 class="section__title">Achievements</h2>
+                <span class="section__subtitle">Recognition & Awards</span>
+
+                <div class="achievements__container container grid">
+                    <!--==================== ACHIEVEMENT 1 ====================-->
+                    <div class="achievements__content">
+                        <div class="achievements__icon">
+                            <i class="uil uil-trophy"></i>
+                        </div>
+                        <h3 class="achievements__title">Best Project of the Year</h3>
+                        <p class="achievements__description">Awarded for the AI-based fruit sorting and grading system.</p>
+                        <span class="achievements__year">2024</span>
+                    </div>
+
+                    <!--==================== ACHIEVEMENT 2 ====================-->
+                    <div class="achievements__content">
+                        <div class="achievements__icon">
+                            <i class="uil uil-book-open"></i>
+                        </div>
+                        <h3 class="achievements__title">Research Publication</h3>
+                        <p class="achievements__description">Published in International Journal of Performability Engineering (IJPE).</p>
+                        <span class="achievements__year">2025</span>
+                    </div>
+
+                    <!--==================== ACHIEVEMENT 3 ====================-->
+                    <div class="achievements__content">
+                        <div class="achievements__icon">
+                            <i class="uil uil-rocket"></i>
+                        </div>
+                        <h3 class="achievements__title">Applied AI Systems</h3>
+                        <p class="achievements__description">Built and deployed AI solutions integrating deep learning and real-world workflows.</p>
+                        <span class="achievements__year">2023-2025</span>
+                    </div>
                 </div>
             </section>
 
            <!--==================== PAPERS ====================-->
-            <!-- <section class="paper section" id="paper" data-id="paper">
-                <h2 class="section__title">Papers</h2>
-                <span class="section__subtitle">Published Papers</span>
+            <section class="paper section" id="paper" data-id="paper">
+                <h2 class="section__title">Publications</h2>
+                <span class="section__subtitle">Published Research</span>
                 
                 <div class="paper__container container swiper">
-                    <div class="swiper-wrapper"> -->
+                    <div class="swiper-wrapper">
                         <!--==================== PAPER 1 ====================-->
-                        <!-- <div class="paper__content grid swiper-slide">
-                            <img src="assets/img/paper1.jpg" alt="CFD code OpenFOAM mesh for pool scrubbing geometry" class="paper__img">
+                        <div class="paper__content grid swiper-slide">
+                            <img src="assets/img/paper1.jpg" alt="Real-Time AI in Surgery research paper" class="paper__img">
 
                             <div class="paper__dat">
-                                <h3 class="paper__title">#poolscrubbing</h3>
-                                <p class="paper__description">CFD Simulation of High Inlet Velocity Air Flow into a Large Tank at Pool Scrubbing Conditions</p>
-                                <a href="https://www.researchgate.net/publication/355117622_CFD_Simulation_of_High_Inlet_Velocity_Air_Flow_into_a_Large_Tank_at_Pool_Scrubbing_Conditions" target="_blank" class="button button--flex button--small paper__button">
+                                <h3 class="paper__title">Real-Time AI in Surgery</h3>
+                                <p class="paper__description">International Journal of Performability Engineering (IJPE), May 2025. DOI: 10.23940/ijpe.25.05.p2.249258</p>
+                                <a href="https://www.ijpe-online.com/EN/10.23940/ijpe.25.05.p2.249258" target="_blank" class="button button--flex button--small paper__button">
                                     Read
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
-                        </div>   -->
+                        </div>
 
                         <!--==================== PAPER 2 ====================-->
                         <!-- <div class="paper__content grid swiper-slide">
@@ -1277,21 +1551,21 @@
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
-                        </div>                          -->
+                        </div>
 
-                    <!-- </div> -->
+                    </div>
 
                         <!-- Add Arrows -->
-                        <!-- <div class="swiper-button-next">
+                        <div class="swiper-button-next">
                             <i class="uil uil-angle-right-b swiper-paper-icon"></i>
                         </div>
                         <div class="swiper-button-prev">
                             <i class="uil uil-angle-left-b swiper-paper-icon"></i>
-                        </div> -->
+                        </div>
 
                         <!-- Add Pagination -->
-                        <!-- <div class="swiper-pagination"></div>
-                </div>-->
+                        <div class="swiper-pagination"></div>
+                </div>
             </section> 
 
             <!--==================== REQUEST MEETING ====================-->
@@ -1442,6 +1716,554 @@
                  </div>
             </section> -->
 
+            <!--==================== FAQ ====================-->
+            <section class="faq section">
+                <h2 class="section__title">FAQ</h2>
+                <span class="section__subtitle">Frequently Asked Questions</span>
+
+                <div class="faq__container container">
+
+
+
+
+                <div class="blog__container container" id="blog-container">
+                    <!--==================== BLOG POST 1 ====================-->
+                    <article class="blog__content" data-category="ai-ml" data-title="The Future of AI in Software Development" data-date="2024-08-10">
+                        <div class="blog__img-container">
+                            <img src="assets/img/blog1.jpg" alt="AI in Modern Development" class="blog__img" onerror="this.src='assets/img/about.jpg'">
+                            <div class="blog__overlay">
+                                <div class="blog__tags">
+                                    <span class="blog__tag">AI</span>
+                                    <span class="blog__tag">Machine Learning</span>
+                                    <span class="blog__tag">Automation</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__data">
+                            <div class="blog__header">
+                                <span class="blog__date">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    August 10, 2024
+                                </span>
+                                <div class="blog__meta-info">
+                                    <span class="blog__author">
+                                        <i class="uil uil-user"></i>
+                                        Syed Mohsin
+                                    </span>
+                                    <span class="blog__views">
+                                        <i class="uil uil-eye"></i>
+                                        245 views
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="blog__title">The Future of AI in Software Development</h3>
+                            <p class="blog__description">Exploring how artificial intelligence is revolutionizing the way we approach software development, from automated code generation to intelligent debugging and predictive analytics.</p>
+                            <div class="blog__meta">
+                                <span class="blog__category ai-ml">AI/ML</span>
+                                <span class="blog__read-time">
+                                    <i class="uil uil-clock"></i>
+                                    5 min read
+                                </span>
+                                <span class="blog__difficulty">
+                                    <i class="uil uil-signal-alt"></i>
+                                    Intermediate
+                                </span>
+                            </div>
+                            <div class="blog__actions">
+                                <button class="blog__button blog__read-btn" onclick="openBlogModal('blog1')">
+                                    Read More
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </button>
+                                <div class="blog__social">
+                                    <button class="blog__social-btn" onclick="likeBlog(this)" data-likes="23">
+                                        <i class="uil uil-heart"></i>
+                                        <span>23</span>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="shareBlog('The Future of AI in Software Development')">
+                                        <i class="uil uil-share-alt"></i>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="bookmarkBlog(this)">
+                                        <i class="uil uil-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--==================== BLOG POST 2 ====================-->
+                    <article class="blog__content" data-category="iot" data-title="Building Smart IoT Solutions for Agriculture" data-date="2024-08-08">
+                        <div class="blog__img-container">
+                            <img src="assets/img/blog2.jpg" alt="IoT Development" class="blog__img" onerror="this.src='assets/img/about.jpg'">
+                            <div class="blog__overlay">
+                                <div class="blog__tags">
+                                    <span class="blog__tag">IoT</span>
+                                    <span class="blog__tag">Agriculture</span>
+                                    <span class="blog__tag">Smart Farming</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__data">
+                            <div class="blog__header">
+                                <span class="blog__date">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    August 8, 2024
+                                </span>
+                                <div class="blog__meta-info">
+                                    <span class="blog__author">
+                                        <i class="uil uil-user"></i>
+                                        Syed Mohsin
+                                    </span>
+                                    <span class="blog__views">
+                                        <i class="uil uil-eye"></i>
+                                        189 views
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="blog__title">Building Smart IoT Solutions for Agriculture</h3>
+                            <p class="blog__description">A comprehensive guide to developing IoT solutions that can transform traditional farming methods and increase agricultural productivity using sensors and automation.</p>
+                            <div class="blog__meta">
+                                <span class="blog__category iot">IoT</span>
+                                <span class="blog__read-time">
+                                    <i class="uil uil-clock"></i>
+                                    7 min read
+                                </span>
+                                <span class="blog__difficulty">
+                                    <i class="uil uil-signal-alt"></i>
+                                    Advanced
+                                </span>
+                            </div>
+                            <div class="blog__actions">
+                                <button class="blog__button blog__read-btn" onclick="openBlogModal('blog2')">
+                                    Read More
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </button>
+                                <div class="blog__social">
+                                    <button class="blog__social-btn" onclick="likeBlog(this)" data-likes="31">
+                                        <i class="uil uil-heart"></i>
+                                        <span>31</span>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="shareBlog('Building Smart IoT Solutions for Agriculture')">
+                                        <i class="uil uil-share-alt"></i>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="bookmarkBlog(this)">
+                                        <i class="uil uil-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--==================== BLOG POST 3 ====================-->
+                    <article class="blog__content" data-category="embedded" data-title="Embedded Systems: From Concept to Reality" data-date="2024-08-05">
+                        <div class="blog__img-container">
+                            <img src="assets/img/blog3.jpg" alt="Embedded Systems" class="blog__img" onerror="this.src='assets/img/about.jpg'">
+                            <div class="blog__overlay">
+                                <div class="blog__tags">
+                                    <span class="blog__tag">Embedded</span>
+                                    <span class="blog__tag">Hardware</span>
+                                    <span class="blog__tag">Firmware</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__data">
+                            <div class="blog__header">
+                                <span class="blog__date">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    August 5, 2024
+                                </span>
+                                <div class="blog__meta-info">
+                                    <span class="blog__author">
+                                        <i class="uil uil-user"></i>
+                                        Syed Mohsin
+                                    </span>
+                                    <span class="blog__views">
+                                        <i class="uil uil-eye"></i>
+                                        167 views
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="blog__title">Embedded Systems: From Concept to Reality</h3>
+                            <p class="blog__description">Understanding the journey of embedded systems development, from initial design concepts to fully functional hardware-software integration and deployment.</p>
+                            <div class="blog__meta">
+                                <span class="blog__category embedded">Embedded</span>
+                                <span class="blog__read-time">
+                                    <i class="uil uil-clock"></i>
+                                    8 min read
+                                </span>
+                                <span class="blog__difficulty">
+                                    <i class="uil uil-signal-alt"></i>
+                                    Expert
+                                </span>
+                            </div>
+                            <div class="blog__actions">
+                                <button class="blog__button blog__read-btn" onclick="openBlogModal('blog3')">
+                                    Read More
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </button>
+                                <div class="blog__social">
+                                    <button class="blog__social-btn" onclick="likeBlog(this)" data-likes="42">
+                                        <i class="uil uil-heart"></i>
+                                        <span>42</span>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="shareBlog('Embedded Systems: From Concept to Reality')">
+                                        <i class="uil uil-share-alt"></i>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="bookmarkBlog(this)">
+                                        <i class="uil uil-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--==================== BLOG POST 4 ====================-->
+                    <article class="blog__content" data-category="web-dev" data-title="Modern Web Development with React and Node.js" data-date="2024-08-03">
+                        <div class="blog__img-container">
+                            <img src="assets/img/blog4.jpg" alt="Web Development" class="blog__img" onerror="this.src='assets/img/about.jpg'">
+                            <div class="blog__overlay">
+                                <div class="blog__tags">
+                                    <span class="blog__tag">React</span>
+                                    <span class="blog__tag">Node.js</span>
+                                    <span class="blog__tag">Full Stack</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__data">
+                            <div class="blog__header">
+                                <span class="blog__date">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    August 3, 2024
+                                </span>
+                                <div class="blog__meta-info">
+                                    <span class="blog__author">
+                                        <i class="uil uil-user"></i>
+                                        Syed Mohsin
+                                    </span>
+                                    <span class="blog__views">
+                                        <i class="uil uil-eye"></i>
+                                        312 views
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="blog__title">Modern Web Development with React and Node.js</h3>
+                            <p class="blog__description">Learn how to build scalable, modern web applications using React for the frontend and Node.js for the backend, including best practices and deployment strategies.</p>
+                            <div class="blog__meta">
+                                <span class="blog__category web-dev">Web Dev</span>
+                                <span class="blog__read-time">
+                                    <i class="uil uil-clock"></i>
+                                    10 min read
+                                </span>
+                                <span class="blog__difficulty">
+                                    <i class="uil uil-signal-alt"></i>
+                                    Intermediate
+                                </span>
+                            </div>
+                            <div class="blog__actions">
+                                <button class="blog__button blog__read-btn" onclick="openBlogModal('blog4')">
+                                    Read More
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </button>
+                                <div class="blog__social">
+                                    <button class="blog__social-btn" onclick="likeBlog(this)" data-likes="56">
+                                        <i class="uil uil-heart"></i>
+                                        <span>56</span>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="shareBlog('Modern Web Development with React and Node.js')">
+                                        <i class="uil uil-share-alt"></i>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="bookmarkBlog(this)">
+                                        <i class="uil uil-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--==================== BLOG POST 5 ====================-->
+                    <article class="blog__content" data-category="tutorials" data-title="Computer Vision for Beginners: A Step-by-Step Guide" data-date="2024-08-01">
+                        <div class="blog__img-container">
+                            <img src="assets/img/blog5.jpg" alt="Computer Vision Tutorial" class="blog__img" onerror="this.src='assets/img/about.jpg'">
+                            <div class="blog__overlay">
+                                <div class="blog__tags">
+                                    <span class="blog__tag">Computer Vision</span>
+                                    <span class="blog__tag">OpenCV</span>
+                                    <span class="blog__tag">Tutorial</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__data">
+                            <div class="blog__header">
+                                <span class="blog__date">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    August 1, 2024
+                                </span>
+                                <div class="blog__meta-info">
+                                    <span class="blog__author">
+                                        <i class="uil uil-user"></i>
+                                        Syed Mohsin
+                                    </span>
+                                    <span class="blog__views">
+                                        <i class="uil uil-eye"></i>
+                                        423 views
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="blog__title">Computer Vision for Beginners: A Step-by-Step Guide</h3>
+                            <p class="blog__description">Start your journey in computer vision with this comprehensive tutorial covering image processing, object detection, and practical applications using Python and OpenCV.</p>
+                            <div class="blog__meta">
+                                <span class="blog__category tutorials">Tutorials</span>
+                                <span class="blog__read-time">
+                                    <i class="uil uil-clock"></i>
+                                    12 min read
+                                </span>
+                                <span class="blog__difficulty">
+                                    <i class="uil uil-signal-alt"></i>
+                                    Beginner
+                                </span>
+                            </div>
+                            <div class="blog__actions">
+                                <button class="blog__button blog__read-btn" onclick="openBlogModal('blog5')">
+                                    Read More
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </button>
+                                <div class="blog__social">
+                                    <button class="blog__social-btn" onclick="likeBlog(this)" data-likes="78">
+                                        <i class="uil uil-heart"></i>
+                                        <span>78</span>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="shareBlog('Computer Vision for Beginners: A Step-by-Step Guide')">
+                                        <i class="uil uil-share-alt"></i>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="bookmarkBlog(this)">
+                                        <i class="uil uil-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--==================== BLOG POST 6 ====================-->
+                    <article class="blog__content" data-category="ai-ml" data-title="Machine Learning in Healthcare: Revolutionizing Patient Care" data-date="2024-07-30">
+                        <div class="blog__img-container">
+                            <img src="assets/img/blog6.jpg" alt="ML in Healthcare" class="blog__img" onerror="this.src='assets/img/about.jpg'">
+                            <div class="blog__overlay">
+                                <div class="blog__tags">
+                                    <span class="blog__tag">Healthcare</span>
+                                    <span class="blog__tag">AI</span>
+                                    <span class="blog__tag">Medical Tech</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__data">
+                            <div class="blog__header">
+                                <span class="blog__date">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    July 30, 2024
+                                </span>
+                                <div class="blog__meta-info">
+                                    <span class="blog__author">
+                                        <i class="uil uil-user"></i>
+                                        Syed Mohsin
+                                    </span>
+                                    <span class="blog__views">
+                                        <i class="uil uil-eye"></i>
+                                        298 views
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="blog__title">Machine Learning in Healthcare: Revolutionizing Patient Care</h3>
+                            <p class="blog__description">Explore how machine learning is transforming healthcare through predictive analytics, diagnostic imaging, personalized treatment plans, and improved patient outcomes.</p>
+                            <div class="blog__meta">
+                                <span class="blog__category ai-ml">AI/ML</span>
+                                <span class="blog__read-time">
+                                    <i class="uil uil-clock"></i>
+                                    9 min read
+                                </span>
+                                <span class="blog__difficulty">
+                                    <i class="uil uil-signal-alt"></i>
+                                    Advanced
+                                </span>
+                            </div>
+                            <div class="blog__actions">
+                                <button class="blog__button blog__read-btn" onclick="openBlogModal('blog6')">
+                                    Read More
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </button>
+                                <div class="blog__social">
+                                    <button class="blog__social-btn" onclick="likeBlog(this)" data-likes="67">
+                                        <i class="uil uil-heart"></i>
+                                        <span>67</span>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="shareBlog('Machine Learning in Healthcare: Revolutionizing Patient Care')">
+                                        <i class="uil uil-share-alt"></i>
+                                    </button>
+                                    <button class="blog__social-btn" onclick="bookmarkBlog(this)">
+                                        <i class="uil uil-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!--==================== BLOG PAGINATION ====================-->
+                <div class="blog__pagination container">
+                    <button class="blog__pagination-btn" id="prev-page" onclick="changePage(-1)">
+                        <i class="uil uil-angle-left"></i>
+                        Previous
+                    </button>
+                    <div class="blog__pagination-numbers" id="pagination-numbers">
+                        <span class="blog__pagination-number active">1</span>
+                        <span class="blog__pagination-number">2</span>
+                        <span class="blog__pagination-number">3</span>
+                    </div>
+                    <button class="blog__pagination-btn" id="next-page" onclick="changePage(1)">
+                        Next
+                        <i class="uil uil-angle-right"></i>
+                    </button>
+                </div>
+
+                <!--==================== BLOG CTA ====================-->
+                <div class="blog__cta container">
+                    <div class="blog__cta-content">
+                        <h3 class="blog__cta-title">Subscribe to My Blog</h3>
+                        <p class="blog__cta-description">Get the latest insights, tutorials, and technology trends delivered straight to your inbox.</p>
+                        <form class="blog__subscribe-form">
+                            <input type="email" placeholder="Enter your email" class="blog__subscribe-input" required>
+                            <button type="submit" class="blog__subscribe-btn button">
+                                Subscribe
+                                <i class="uil uil-envelope button__icon"></i>
+                            </button>
+                        </form>
+                        <p class="blog__cta-note">Join 500+ developers already subscribed</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Modal -->
+            <div class="blog__modal" id="blog-modal">
+                <div class="blog__modal-content">
+                    <span class="blog__modal-close" onclick="closeBlogModal()">&times;</span>
+                    <div class="blog__modal-body" id="blog-modal-body">
+                        <!-- Blog content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!--==================== FAQ ====================-->
+            <section class="faq section">
+                <h2 class="section__title">FAQ</h2>
+                <span class="section__subtitle">Frequently Asked Questions</span>
+
+                <div class="faq__container container">
+                    <!--==================== FAQ ITEM 1 ====================-->
+                    <div class="faq__item">
+                        <div class="faq__header" onclick="toggleFaq(this)">
+                            <h3 class="faq__question">What services do you offer?</h3>
+                            <i class="uil uil-plus faq__icon"></i>
+                        </div>
+                        <div class="faq__content">
+                            <p class="faq__answer">I offer web development, AI/ML solutions, embedded systems development, IoT solutions, and consulting services for technology projects.</p>
+                        </div>
+                    </div>
+
+                    <!--==================== FAQ ITEM 2 ====================-->
+                    <div class="faq__item">
+                        <div class="faq__header" onclick="toggleFaq(this)">
+                            <h3 class="faq__question">How long does a typical project take?</h3>
+                            <i class="uil uil-plus faq__icon"></i>
+                        </div>
+                        <div class="faq__content">
+                            <p class="faq__answer">Project duration varies based on complexity and requirements. Simple web applications take 2-4 weeks, while complex AI/ML solutions may take 2-3 months.</p>
+                        </div>
+                    </div>
+
+                    <!--==================== FAQ ITEM 3 ====================-->
+                    <div class="faq__item">
+                        <div class="faq__header" onclick="toggleFaq(this)">
+                            <h3 class="faq__question">Do you work on remote projects?</h3>
+                            <i class="uil uil-plus faq__icon"></i>
+                        </div>
+                        <div class="faq__content">
+                            <p class="faq__answer">Yes, I work with clients globally and am comfortable with remote collaboration using modern communication tools and project management platforms.</p>
+                        </div>
+                    </div>
+
+                    <!--==================== FAQ ITEM 4 ====================-->
+                    <div class="faq__item">
+                        <div class="faq__header" onclick="toggleFaq(this)">
+                            <h3 class="faq__question">What is your experience with AI/ML?</h3>
+                            <i class="uil uil-plus faq__icon"></i>
+                        </div>
+                        <div class="faq__content">
+                            <p class="faq__answer">I'm currently pursuing MTech in AI and ML, have developed multiple AI projects including computer vision systems, chatbots, and predictive models using TensorFlow, PyTorch, and scikit-learn.</p>
+                        </div>
+                    </div>
+
+                    <!--==================== FAQ ITEM 5 ====================-->
+                    <div class="faq__item">
+                        <div class="faq__header" onclick="toggleFaq(this)">
+                            <h3 class="faq__question">How can I get started with a project?</h3>
+                            <i class="uil uil-plus faq__icon"></i>
+                        </div>
+                        <div class="faq__content">
+                            <p class="faq__answer">Simply contact me through the contact form below or email me directly. We'll discuss your requirements, timeline, and I'll provide a detailed project proposal.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== NEWSLETTER ====================-->
+            <section class="newsletter section">
+                <div class="newsletter__container container">
+                    <div class="newsletter__content">
+                        <h2 class="newsletter__title">Stay Updated!</h2>
+                        <p class="newsletter__description">Subscribe to my newsletter to get the latest updates on technology, project insights, and industry trends.</p>
+                        
+                        <form class="newsletter__form">
+                            <div class="newsletter__inputs">
+                                <input type="email" placeholder="Enter your email" class="newsletter__input" id="newsletter-email" required>
+                                <button type="submit" class="button newsletter__button">
+                                    Subscribe
+                                    <i class="uil uil-envelope button__icon"></i>
+                                </button>
+                            </div>
+                            <p class="newsletter__terms">By subscribing, you agree to receive updates and can unsubscribe at any time.</p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== RESUME VIEWER ====================-->
+            <section class="resume section">
+                <h2 class="section__title">My Resume</h2>
+                <span class="section__subtitle">View Online</span>
+
+                <div class="resume__container container">
+                    <div class="resume__content">
+                        <p class="resume__description">Take a look at my detailed resume with all my qualifications, experience, and skills.</p>
+                        <div class="resume__buttons">
+                            <button class="button resume__view-btn" onclick="openResumeModal()">
+                                View Online
+                                <i class="uil uil-eye button__icon"></i>
+                            </button>
+                            <a href="assets/pdf/SyedMohsin-Resume.pdf" download class="button resume__download-btn">
+                                Download PDF
+                                <i class="uil uil-download-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume Modal -->
+                <div class="resume__modal" id="resume-modal">
+                    <div class="resume__modal-content">
+                        <span class="resume__modal-close" onclick="closeResumeModal()">&times;</span>
+                        <iframe src="assets/pdf/SyedMohsin-Resume.pdf" class="resume__iframe"></iframe>
+                    </div>
+                </div>
+            </section>
+
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact" data-id="contact">
                 <h2 class="section__title">Contact Me</h2>
@@ -1511,6 +2333,26 @@
             </section>
         </main>
 
+        <!--==================== CALL TO ACTION ====================-->
+        <section class="cta section">
+            <div class="cta__container container">
+                <div class="cta__content">
+                    <h2 class="cta__title">Ready to Start Your Next Project?</h2>
+                    <p class="cta__description">Let's work together to bring your ideas to life. From concept to deployment, I'll help you build something amazing.</p>
+                    <div class="cta__buttons">
+                        <a href="#contact" class="button cta__button-primary">
+                            Get Started
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </a>
+                        <a href="assets/pdf/SyedMohsin-Resume.pdf" download class="button cta__button-secondary">
+                            Download CV
+                            <i class="uil uil-download-alt button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!--==================== FOOTER ====================-->
         <footer class="footer">
             <div class="footer__bg">
@@ -1522,22 +2364,28 @@
 
                     <ul class="footer__links">
                         <li>
+                            <a href="#about" class="footer__link">About</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="footer__link">Services</a>
+                        </li>
+                        <li>
                             <a href="#projects" class="footer__link">Projects</a>
                         </li>
-                        <!-- <li>
-                            <a href="#paper" class="footer__link">Papers</a>
-                        </li> -->
+                        <li>
+                            <a href="#achievements" class="footer__link">Achievements</a>
+                        </li>
+                        <li>
+                            <a href="#paper" class="footer__link">Publications</a>
+                        </li>
+                        <li>
+                            <a href="#blog" class="footer__link">Blog</a>
+                        </li>
                         <li>
                             <a href="#testimonials" class="footer__link">References</a>
                         </li>
-                        <!-- <li>
-                            <a href="#videos" class="footer__link">Videos</a>
-                        </li> -->
                         <li>
-                            <a href="#meeting" class="footer__link">Meeting</a>
-                        </li>
-                        <li>
-                            <a href="#presentation" class="footer__link">Presentations</a>
+                            <a href="#contact" class="footer__link">Contact</a>
                         </li>
                     </ul>
 
@@ -1562,7 +2410,10 @@
         </footer>
         
         <!--==================== SCROLL TOP ====================-->
-        <a href="" class="scrollup" id="scroll-up">
+        <a href="#" class="scrollup" id="scroll-up">
+            <svg class="scrollup__progress" width="54" height="54">
+                <circle class="scrollup__progress-circle" cx="27" cy="27" r="25" stroke-width="2" fill="none"></circle>
+            </svg>
             <i class="uil uil-arrow-up scrollup__icon"></i>
         </a>
 
@@ -1570,6 +2421,7 @@
         <script src="assets/js/swiper-bundle.min.js"></script>
 
         <!--==================== MAIN JS ====================-->
+        <script src="assets/js/blog-data.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
 </html>
