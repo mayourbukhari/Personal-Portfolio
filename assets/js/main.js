@@ -1257,7 +1257,28 @@ if (statisticsSection) {
 }
 
 /*==================== RESUME MODAL ====================*/
+function getSelectedResumeUrl() {
+    const select = document.getElementById('resume-select');
+    if (select && select.value) {
+        return select.value;
+    }
+    return 'assets/pdf/SyedMohsin-Resume.pdf';
+}
+
+function syncResumeLinks() {
+    const resumeUrl = getSelectedResumeUrl();
+    const downloadLink = document.getElementById('resume-download');
+    if (downloadLink) {
+        downloadLink.href = resumeUrl;
+    }
+}
+
 function openResumeModal() {
+    const resumeUrl = getSelectedResumeUrl();
+    const iframe = document.getElementById('resume-iframe');
+    if (iframe) {
+        iframe.src = resumeUrl;
+    }
     document.getElementById('resume-modal').style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
@@ -1281,6 +1302,12 @@ document.addEventListener('keydown', function(event) {
         closeResumeModal();
     }
 });
+
+const resumeSelect = document.getElementById('resume-select');
+if (resumeSelect) {
+    resumeSelect.addEventListener('change', syncResumeLinks);
+    syncResumeLinks();
+}
 
 /*==================== SMOOTH SCROLLING FOR ANCHOR LINKS ====================*/
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

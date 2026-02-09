@@ -215,12 +215,12 @@
                             </div>
 
                             <div>
-                                <span class="about__info-title">2+</span>
+                                <span class="about__info-title">10+</span>
                                 <span class="about__info-name">Projects <br> Completed</span>
                             </div>
 
                             <div>
-                                <span class="about__info-title">0</span>
+                                <span class="about__info-title">1+</span>
                                 <span class="about__info-name">Papers <br> Published</span>
                             </div>
                         </div>
@@ -2262,17 +2262,26 @@
             <!--==================== RESUME VIEWER ====================-->
             <section class="resume section">
                 <h2 class="section__title">My Resume</h2>
-                <span class="section__subtitle">View Online</span>
+                <span class="section__subtitle">Choose a Version</span>
 
                 <div class="resume__container container">
                     <div class="resume__content">
-                        <p class="resume__description">Take a look at my detailed resume with all my qualifications, experience, and skills.</p>
+                        <p class="resume__description">Pick the resume version you want to view or download.</p>
+                        <div class="resume__picker">
+                            <label class="resume__label" for="resume-select">Select Resume</label>
+                            <select class="resume__select" id="resume-select">
+                                <option value="assets/pdf/SyedMohsin-Resume.pdf">Resume - Primary</option>
+                                <option value="assets/pdf/SyedMohsin-Resume1.pdf">Resume - Alternate</option>
+                                <option value="assets/pdf/SYED_MOHSIN_BUKHARI.pdf">Resume - Formal</option>
+                                <option value="assets/pdf/speacializedCVv2.pdf">Resume - Specialized</option>
+                            </select>
+                        </div>
                         <div class="resume__buttons">
                             <button class="button resume__view-btn" onclick="openResumeModal()">
                                 View Online
                                 <i class="uil uil-eye button__icon"></i>
                             </button>
-                            <a href="assets/pdf/SyedMohsin-Resume.pdf" download class="button resume__download-btn">
+                            <a href="assets/pdf/SyedMohsin-Resume.pdf" download class="button resume__download-btn" id="resume-download">
                                 Download PDF
                                 <i class="uil uil-download-alt button__icon"></i>
                             </a>
@@ -2284,7 +2293,7 @@
                 <div class="resume__modal" id="resume-modal">
                     <div class="resume__modal-content">
                         <span class="resume__modal-close" onclick="closeResumeModal()">&times;</span>
-                        <iframe src="assets/pdf/SyedMohsin-Resume.pdf" class="resume__iframe"></iframe>
+                        <iframe src="assets/pdf/SyedMohsin-Resume.pdf" class="resume__iframe" id="resume-iframe"></iframe>
                     </div>
                 </div>
             </section>
