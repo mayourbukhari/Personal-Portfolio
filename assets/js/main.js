@@ -974,6 +974,15 @@ let swiperPaper = new Swiper('.paper__container', {
     },
   });
 
+// Update swiper after DOM is fully loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        swiperPaper.update();
+    });
+} else {
+    swiperPaper.update();
+}
+
 /*==================== TESTIMONIAL ====================*/
 let swiperTestimonial = new Swiper('.testimonial__container', {
     loop: true,
