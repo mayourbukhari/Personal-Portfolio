@@ -74,8 +74,12 @@ Results-driven Software Engineer with expertise in developing scalable RESTful A
 
 ## Publications
 
+- **A Review on Artificial Intelligence Techniques for Breast Cancer Detection: Advances, Challenges, and Future Directions**  
+  *Archives of Computational Methods in Engineering*, June 2026 | Q1 Scopus Indexed  
+  [DOI: 10.1007/s11831-026-10705-5](https://doi.org/10.1007/s11831-026-10705-5)  
+
 - **Real-Time AI in Surgery: A Review of Precision, Innovation, and Future Directions in Surgical Assistance**  
-  *International Journal of Performability Engineering (IJPE)*, May 2025  
+  *International Journal of Performability Engineering (IJPE)*, May 2025 | Q3 Scopus Indexed  
   [DOI: 10.23940/ijpe.25.05.p2.249258](https://www.ijpe-online.com/EN/10.23940/ijpe.25.05.p2.249258)  
 
 ---
